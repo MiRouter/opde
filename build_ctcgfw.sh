@@ -52,6 +52,9 @@ CONFIG_PACKAGE_autosamba=n
 CONFIG_PACKAGE_luci-app-music-remote-center=n
 CONFIG_PACKAGE_kmod-tcp-bbr=m
 CONFIG_PACKAGE_luci-app-flowoffload=n
+CONFIG_PACKAGE_luci-app-amule=n
+CONFIG_PACKAGE_luci-app-qbittorrent=n
+CONFIG_PACKAGE_luci-app-openvpn-server=n
 
 CONFIG_GCC_USE_VERSION_8=n
 CONFIG_GCC_USE_VERSION_9=y
