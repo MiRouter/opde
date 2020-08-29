@@ -3,7 +3,7 @@
 - x86 - X86
   - x86_64 ([ElonH](https://github.com/ElonH/opde))
 - ramips - MediaTek Ralink MIPS
-  - mt7621 - MT7621 based board ([Derren-Bryan](https://github.com/Derren-Bryan/opde-ramips-mt7621))
+  - mt7621 - MT7621 based board ([liuran001](https://github.com/MiRouter/opde))
 - ipq40xx - Qualcomm Atheros IPQ40XX
   - generic - Generic ([Derren-Bryan](https://github.com/Derren-Bryan/opde-ipq40xx-generic))
 - bcm27xx - Broadcom BCM27xx
