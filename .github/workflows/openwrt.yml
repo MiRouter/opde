@@ -8,8 +8,6 @@ on:
       - '**.md' # ignore *.md files
     branches:
       - ramips-mt7621
-    paths:
-      - 'aaa'
 
 jobs:
   APT:
