@@ -180,7 +180,7 @@ jobs:
         uses: actions/checkout@v2
         with: # refs: https://github.community/t5/GitHub-Actions/Action-does-not-trigger-another-on-push-tag-action/td-p/40692
           token: ${{ secrets.RELEASE_TOKEN }}
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-SDK
           path: ./${{matrix.source}}-SDK
@@ -296,55 +296,55 @@ jobs:
       # - uses: elonh/download-artifact-regexp@master
       #   with:
       #     pattern: ^${{matrix.source}}-(SDK|Imagebuilder|Firmware)$
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-SDK
           path: ./${{matrix.source}}-SDK/
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-Imagebuilder
           path: ./${{matrix.source}}-Imagebuilder/
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-Firmware
           path: ./${{matrix.source}}-Firmware/
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v2.0.5
         with:
           name: ${{matrix.source}}-packages-base
           path: ./${{matrix.source}}-Packages/${{matrix.source}}-Packages-base
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-packages-ofc-lib-1
           path: ./${{matrix.source}}-Packages/${{matrix.source}}-Packages-ofc-lib-1
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-packages-ofc-lib-2
           path: ./${{matrix.source}}-Packages/${{matrix.source}}-Packages-ofc-lib-2
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-packages-ofc-net-1
           path: ./${{matrix.source}}-Packages/${{matrix.source}}-Packages-ofc-net-1
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-packages-ofc-net-2
           path: ./${{matrix.source}}-Packages/${{matrix.source}}-Packages-ofc-net-2
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-packages-ofc-lang
           path: ./${{matrix.source}}-Packages/${{matrix.source}}-Packages-ofc-lang
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-packages-ofc-utils
           path: ./${{matrix.source}}-Packages/${{matrix.source}}-Packages-ofc-utils
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-packages-ofc-other
           path: ./${{matrix.source}}-Packages/${{matrix.source}}-Packages-ofc-other
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-Packages-ctcgfw
           path: ./${{matrix.source}}-Packages/${{matrix.source}}-Packages-ctcgfw
-      - uses: actions/download-artifact@v1 
+      - uses: actions/download-artifact@v2.0.5 
         with:
           name: ${{matrix.source}}-Packages-lean
           path: ./${{matrix.source}}-Packages/${{matrix.source}}-Packages-lean
