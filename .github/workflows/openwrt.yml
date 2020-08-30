@@ -4,8 +4,8 @@ name: OpenWRT
 
 on:
   push:
-    paths-ignore:
-      - '**.md' # ignore *.md files
+    paths:
+      - 'aaa'
     branches:
       - ramips-mt7621
 
