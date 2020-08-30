@@ -48,7 +48,7 @@ jobs:
     strategy:
       fail-fast: false #https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategyfail-fast
       matrix:
-        source: [latest, ctcgfw]
+        source: [ctcgfw]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -164,7 +164,7 @@ jobs:
     strategy:
       fail-fast: false #https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategyfail-fast
       matrix:
-        source: [latest, ctcgfw]
+        source: [ctcgfw]
         packages: 
           - ofc-lib-1
           - ofc-lib-2
@@ -270,10 +270,6 @@ jobs:
           name: Release ${{steps.tag.outputs.tagName}}
           allow_override: true
           body: |
-            Activate `ootoc` in `latest`
-            ``` bash
-            bash <(wget -qO- https://cdn.jsdelivr.net/gh/${{github.repository}}@${{steps.tag.outputs.tagName}}/feeds/scripts/activate-ootoc.sh) ${{github.repository}} latest ${{steps.tag.outputs.tagName}}
-            ```
             Activate `ootoc` in `ctcgfw`
             ``` bash
             bash <(wget -qO- https://cdn.jsdelivr.net/gh/${{github.repository}}@${{steps.tag.outputs.tagName}}/feeds/scripts/activate-ootoc.sh) ${{github.repository}} ctcgfw ${{steps.tag.outputs.tagName}}
@@ -290,7 +286,7 @@ jobs:
     strategy:
       fail-fast: false #https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategyfail-fast
       matrix:
-        source: [latest, ctcgfw]
+        source: [ctcgfw]
     steps:
       - uses: actions/checkout@v2
       # - uses: elonh/download-artifact-regexp@master
