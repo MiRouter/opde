@@ -1,4 +1,4 @@
-## refs: https://github.com/project-openwrt/build-openwrt/blob/master/.github/workflows/main.yml
+## refs: https://github.com/project-openwrt/build-openwrt/blob/master/.github/workflows/main.yml 
 
 name: OpenWRT
 
