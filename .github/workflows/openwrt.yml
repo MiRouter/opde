@@ -28,7 +28,7 @@ jobs:
       - name: CacheAPT
         id: cache
         # refs: https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows
-        uses: actions/cache@v1
+        uses: actions/cache@v2.1.1
         with:
           path: ./scripts/apt
           key: apt-sdk-test-${{steps.time.outputs.date}}-${{ hashFiles('./scripts/download-apt.sh') }}
@@ -59,7 +59,7 @@ jobs:
           echo "::set-output name=date::$(date +'%Y-%m')"
       - name: CacheAPT
         # refs: https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows
-        uses: actions/cache@v1
+        uses: actions/cache@v2.1.1
         with:
           path: ./scripts/apt
           key: apt-sdk-test-${{steps.time.outputs.date}}-${{ hashFiles('./scripts/download-apt.sh') }}
@@ -84,7 +84,7 @@ jobs:
           mkdir -p dl || true
       - name: CacheDL
         # refs: https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows
-        uses: actions/cache@v1
+        uses: actions/cache@v2.1.1
         id: cache
         with:
           path: ./${{matrix.source}}/dl
@@ -194,7 +194,7 @@ jobs:
           echo "::set-output name=date::$(date +'%Y-%m')"
       - name: CacheAPT
         # refs: https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows
-        uses: actions/cache@v1
+        uses: actions/cache@v2.1.1
         with:
           path: ./scripts/apt
           key: apt-sdk-test-${{steps.time.outputs.date}}-${{ hashFiles('./scripts/download-apt.sh') }}
@@ -220,7 +220,7 @@ jobs:
           mkdir -p dl 2>/dev/null || true
       - name: CacheDL
         # refs: https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows
-        uses: actions/cache@v1
+        uses: actions/cache@v2.1.1
         with:
           path: ./${{matrix.source}}_sdk/dl
           key: dl-test-${{steps.time.outputs.date}}
@@ -365,7 +365,7 @@ jobs:
           echo "::set-output name=date::$(date +'%Y-%m')"
       - name: CacheAPT
         # refs: https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows
-        uses: actions/cache@v1
+        uses: actions/cache@v2.1.1
         with:
           path: ./scripts/apt
           key: apt-sdk-test-${{steps.time.outputs.date}}-${{ hashFiles('./scripts/download-apt.sh') }}
